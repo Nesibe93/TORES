@@ -201,6 +201,7 @@
             this.cbxMeetRoom.Name = "cbxMeetRoom";
             this.cbxMeetRoom.Size = new System.Drawing.Size(118, 27);
             this.cbxMeetRoom.TabIndex = 1;
+            this.cbxMeetRoom.SelectedIndexChanged += new System.EventHandler(this.cbxMeetRoom_SelectedIndexChanged);
             // 
             // grpProperty
             // 

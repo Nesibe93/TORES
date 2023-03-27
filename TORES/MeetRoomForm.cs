@@ -64,5 +64,10 @@ namespace TORES
             RoomLoad();
             DatagwLoad();
         }
+
+        private void cbxMeetRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // combobox ın seçili indexinden checkboxta Enabled : True/False mu ayarlamasını yapacağız
+        }
     }
 }
