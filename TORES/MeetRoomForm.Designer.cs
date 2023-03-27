@@ -50,7 +50,7 @@
             this.chckbVOIP = new System.Windows.Forms.CheckBox();
             this.chckbIPTV = new System.Windows.Forms.CheckBox();
             this.chckbInternet = new System.Windows.Forms.CheckBox();
-            this.chckbBoard = new System.Windows.Forms.CheckBox();
+            this.chckbIBoard = new System.Windows.Forms.CheckBox();
             this.chckbProjection = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.nudRoomCapacity = new System.Windows.Forms.NumericUpDown();
@@ -209,7 +209,7 @@
             this.grpProperty.Controls.Add(this.chckbVOIP);
             this.grpProperty.Controls.Add(this.chckbIPTV);
             this.grpProperty.Controls.Add(this.chckbInternet);
-            this.grpProperty.Controls.Add(this.chckbBoard);
+            this.grpProperty.Controls.Add(this.chckbIBoard);
             this.grpProperty.Controls.Add(this.chckbProjection);
             this.grpProperty.Controls.Add(this.label3);
             this.grpProperty.Controls.Add(this.nudRoomCapacity);
@@ -253,15 +253,15 @@
             this.chckbInternet.Text = "Internet";
             this.chckbInternet.UseVisualStyleBackColor = true;
             // 
-            // chckbBoard
+            // chckbIBoard
             // 
-            this.chckbBoard.AutoSize = true;
-            this.chckbBoard.Location = new System.Drawing.Point(39, 90);
-            this.chckbBoard.Name = "chckbBoard";
-            this.chckbBoard.Size = new System.Drawing.Size(79, 23);
-            this.chckbBoard.TabIndex = 2;
-            this.chckbBoard.Text = "I-Board";
-            this.chckbBoard.UseVisualStyleBackColor = true;
+            this.chckbIBoard.AutoSize = true;
+            this.chckbIBoard.Location = new System.Drawing.Point(39, 90);
+            this.chckbIBoard.Name = "chckbIBoard";
+            this.chckbIBoard.Size = new System.Drawing.Size(79, 23);
+            this.chckbIBoard.TabIndex = 2;
+            this.chckbIBoard.Text = "I-Board";
+            this.chckbIBoard.UseVisualStyleBackColor = true;
             // 
             // chckbProjection
             // 
@@ -298,7 +298,6 @@
             this.btnRequest.TabIndex = 5;
             this.btnRequest.Text = "Rezervasyon İsteği";
             this.btnRequest.UseVisualStyleBackColor = true;
-            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // btnCancel
             // 
@@ -339,7 +338,6 @@
             this.Name = "frmMeetRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TORES v1.0-Kullanıcı : < Ad Soyad - Departman>";
-            this.Load += new System.EventHandler(this.frmMeetRoom_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grpProperty.ResumeLayout(false);
@@ -375,7 +373,7 @@
         private System.Windows.Forms.CheckBox chckbVOIP;
         private System.Windows.Forms.CheckBox chckbIPTV;
         private System.Windows.Forms.CheckBox chckbInternet;
-        private System.Windows.Forms.CheckBox chckbBoard;
+        private System.Windows.Forms.CheckBox chckbIBoard;
         private System.Windows.Forms.CheckBox chckbProjection;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudRoomCapacity;

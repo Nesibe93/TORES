@@ -16,7 +16,7 @@ namespace TORES
     public partial class frmMeetRoom : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-V653CLI\SQLEXPRESS01;Initial Catalog=TORESDB;Integrated Security=True");
-
+        //string connectionString;
         public frmMeetRoom()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace TORES
 
         private void RoomPropLoad()
         {
-           
+
         }
         private void DatagwLoad()
         {
@@ -46,9 +46,9 @@ namespace TORES
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dgwMeetRoom.DataSource= dt;
+            dgwMeetRoom.DataSource = dt;
             connection.Close();
-                
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -58,15 +58,16 @@ namespace TORES
 
         private void cbxMeetRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
-           string SelectedValue = cbxMeetRoom.SelectedItem.ToString();
+            // comboboxtaki tıklanan değere göre checkboxın enabled / falsed değerini ayarlama yapılacak
 
 
-        
+            string selectedValue = cbxMeetRoom.SelectedItem.ToString();
 
+            
+          
         }
         private void frmMeetRoom_Load(object sender, EventArgs e)
         {
-            
             RoomLoad();
             DatagwLoad();
         }
