@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace TORES
 {
     public partial class frmMeetRoom : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-V653CLI\SQLEXPRESS01;Initial Catalog=TORESDB;Integrated Security=True");
+
         //string connectionString;
         public frmMeetRoom()
         {
@@ -63,8 +62,8 @@ namespace TORES
 
             string selectedValue = cbxMeetRoom.SelectedItem.ToString();
 
-            
-          
+
+
         }
         private void frmMeetRoom_Load(object sender, EventArgs e)
         {
