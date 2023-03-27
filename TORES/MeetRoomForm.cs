@@ -15,7 +15,6 @@ namespace TORES
     {
         SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-V653CLI\SQLEXPRESS01;Initial Catalog=TORESDB;Integrated Security=True");
 
-        //string connectionString;
         public frmMeetRoom()
         {
             InitializeComponent();
@@ -55,25 +54,15 @@ namespace TORES
             this.Close();
         }
 
-        private void cbxMeetRoom_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnRequest_Click(object sender, EventArgs e)
         {
-            // comboboxtaki tıklanan değere göre checkboxın enabled / falsed değerini ayarlama yapılacak
-
-
-            string selectedValue = cbxMeetRoom.SelectedItem.ToString();
-
-
-
+            // Kullanıcının karar verdiği odanın SelectedValue değerini rezervasyon istek formuna parametre olarak gönderilecek
         }
+
         private void frmMeetRoom_Load(object sender, EventArgs e)
         {
             RoomLoad();
             DatagwLoad();
-        }
-
-        private void btnRequest_Click(object sender, EventArgs e)
-        {
-            // Kullanıcının karar verdiği odanın SelectedValue değerini rezervasyon istek formuna parametre olarak gönderilecek
         }
     }
 }

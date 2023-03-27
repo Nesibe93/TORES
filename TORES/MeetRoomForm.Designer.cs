@@ -201,7 +201,6 @@
             this.cbxMeetRoom.Name = "cbxMeetRoom";
             this.cbxMeetRoom.Size = new System.Drawing.Size(118, 27);
             this.cbxMeetRoom.TabIndex = 1;
-            this.cbxMeetRoom.SelectedIndexChanged += new System.EventHandler(this.cbxMeetRoom_SelectedIndexChanged);
             // 
             // grpProperty
             // 
@@ -337,6 +336,7 @@
             this.Name = "frmMeetRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TORES v1.0-Kullanıcı : < Ad Soyad - Departman>";
+            this.Load += new System.EventHandler(this.frmMeetRoom_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grpProperty.ResumeLayout(false);
