@@ -47,13 +47,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbxMeetRoom = new System.Windows.Forms.ComboBox();
             this.grpProperty = new System.Windows.Forms.GroupBox();
-            this.nudRoomCapacity = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chckbProjection = new System.Windows.Forms.CheckBox();
-            this.chckbBoard = new System.Windows.Forms.CheckBox();
-            this.chckbInternet = new System.Windows.Forms.CheckBox();
-            this.chckbIPTV = new System.Windows.Forms.CheckBox();
             this.chckbVOIP = new System.Windows.Forms.CheckBox();
+            this.chckbIPTV = new System.Windows.Forms.CheckBox();
+            this.chckbInternet = new System.Windows.Forms.CheckBox();
+            this.chckbBoard = new System.Windows.Forms.CheckBox();
+            this.chckbProjection = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nudRoomCapacity = new System.Windows.Forms.NumericUpDown();
             this.btnRequest = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgwMeetRoom = new System.Windows.Forms.DataGridView();
@@ -99,7 +99,7 @@
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // rezervasyonToolStripMenuItem
@@ -223,51 +223,15 @@
             this.grpProperty.TabStop = false;
             this.grpProperty.Text = "Özellikler";
             // 
-            // nudRoomCapacity
+            // chckbVOIP
             // 
-            this.nudRoomCapacity.Location = new System.Drawing.Point(103, 29);
-            this.nudRoomCapacity.Name = "nudRoomCapacity";
-            this.nudRoomCapacity.Size = new System.Drawing.Size(49, 26);
-            this.nudRoomCapacity.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 19);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Kapasite :";
-            // 
-            // chckbProjection
-            // 
-            this.chckbProjection.AutoSize = true;
-            this.chckbProjection.Location = new System.Drawing.Point(39, 61);
-            this.chckbProjection.Name = "chckbProjection";
-            this.chckbProjection.Size = new System.Drawing.Size(98, 23);
-            this.chckbProjection.TabIndex = 2;
-            this.chckbProjection.Text = "Projeksiyon";
-            this.chckbProjection.UseVisualStyleBackColor = true;
-            // 
-            // chckbBoard
-            // 
-            this.chckbBoard.AutoSize = true;
-            this.chckbBoard.Location = new System.Drawing.Point(39, 90);
-            this.chckbBoard.Name = "chckbBoard";
-            this.chckbBoard.Size = new System.Drawing.Size(79, 23);
-            this.chckbBoard.TabIndex = 2;
-            this.chckbBoard.Text = "I-Board";
-            this.chckbBoard.UseVisualStyleBackColor = true;
-            // 
-            // chckbInternet
-            // 
-            this.chckbInternet.AutoSize = true;
-            this.chckbInternet.Location = new System.Drawing.Point(39, 119);
-            this.chckbInternet.Name = "chckbInternet";
-            this.chckbInternet.Size = new System.Drawing.Size(81, 23);
-            this.chckbInternet.TabIndex = 2;
-            this.chckbInternet.Text = "Internet";
-            this.chckbInternet.UseVisualStyleBackColor = true;
+            this.chckbVOIP.AutoSize = true;
+            this.chckbVOIP.Location = new System.Drawing.Point(39, 177);
+            this.chckbVOIP.Name = "chckbVOIP";
+            this.chckbVOIP.Size = new System.Drawing.Size(61, 23);
+            this.chckbVOIP.TabIndex = 2;
+            this.chckbVOIP.Text = "VOIP";
+            this.chckbVOIP.UseVisualStyleBackColor = true;
             // 
             // chckbIPTV
             // 
@@ -279,15 +243,51 @@
             this.chckbIPTV.Text = "IP-TV";
             this.chckbIPTV.UseVisualStyleBackColor = true;
             // 
-            // chckbVOIP
+            // chckbInternet
             // 
-            this.chckbVOIP.AutoSize = true;
-            this.chckbVOIP.Location = new System.Drawing.Point(39, 177);
-            this.chckbVOIP.Name = "chckbVOIP";
-            this.chckbVOIP.Size = new System.Drawing.Size(61, 23);
-            this.chckbVOIP.TabIndex = 2;
-            this.chckbVOIP.Text = "VOIP";
-            this.chckbVOIP.UseVisualStyleBackColor = true;
+            this.chckbInternet.AutoSize = true;
+            this.chckbInternet.Location = new System.Drawing.Point(39, 119);
+            this.chckbInternet.Name = "chckbInternet";
+            this.chckbInternet.Size = new System.Drawing.Size(81, 23);
+            this.chckbInternet.TabIndex = 2;
+            this.chckbInternet.Text = "Internet";
+            this.chckbInternet.UseVisualStyleBackColor = true;
+            // 
+            // chckbBoard
+            // 
+            this.chckbBoard.AutoSize = true;
+            this.chckbBoard.Location = new System.Drawing.Point(39, 90);
+            this.chckbBoard.Name = "chckbBoard";
+            this.chckbBoard.Size = new System.Drawing.Size(79, 23);
+            this.chckbBoard.TabIndex = 2;
+            this.chckbBoard.Text = "I-Board";
+            this.chckbBoard.UseVisualStyleBackColor = true;
+            // 
+            // chckbProjection
+            // 
+            this.chckbProjection.AutoSize = true;
+            this.chckbProjection.Location = new System.Drawing.Point(39, 61);
+            this.chckbProjection.Name = "chckbProjection";
+            this.chckbProjection.Size = new System.Drawing.Size(98, 23);
+            this.chckbProjection.TabIndex = 2;
+            this.chckbProjection.Text = "Projeksiyon";
+            this.chckbProjection.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 19);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Kapasite :";
+            // 
+            // nudRoomCapacity
+            // 
+            this.nudRoomCapacity.Location = new System.Drawing.Point(103, 29);
+            this.nudRoomCapacity.Name = "nudRoomCapacity";
+            this.nudRoomCapacity.Size = new System.Drawing.Size(49, 26);
+            this.nudRoomCapacity.TabIndex = 0;
             // 
             // btnRequest
             // 
@@ -298,6 +298,7 @@
             this.btnRequest.TabIndex = 5;
             this.btnRequest.Text = "Rezervasyon İsteği";
             this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // btnCancel
             // 
@@ -313,9 +314,9 @@
             // dgwMeetRoom
             // 
             this.dgwMeetRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwMeetRoom.Location = new System.Drawing.Point(39, 211);
+            this.dgwMeetRoom.Location = new System.Drawing.Point(39, 256);
             this.dgwMeetRoom.Name = "dgwMeetRoom";
-            this.dgwMeetRoom.Size = new System.Drawing.Size(240, 130);
+            this.dgwMeetRoom.Size = new System.Drawing.Size(240, 115);
             this.dgwMeetRoom.TabIndex = 6;
             // 
             // frmMeetRoom
@@ -334,7 +335,7 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmMeetRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TORES v1.0-Kullanıcı : < Ad Soyad - Departman>";

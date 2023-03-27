@@ -16,7 +16,7 @@ namespace TORES
     public partial class frmMeetRoom : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-V653CLI\SQLEXPRESS01;Initial Catalog=TORESDB;Integrated Security=True");
-        
+
         public frmMeetRoom()
         {
             InitializeComponent();
@@ -27,9 +27,30 @@ namespace TORES
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM datRoom", connection);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dataTable = new DataTable();
-
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cbxMeetRoom.DataSource = dt;
+            cbxMeetRoom.DisplayMember = "RoomName";
+            cbxMeetRoom.ValueMember = "RoomID";
+            connection.Close();
         }
+
+        private void RoomPropLoad()
+        {
+           
+        }
+        private void DatagwLoad()
+        {
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM datRoom", connection);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgwMeetRoom.DataSource= dt;
+            connection.Close();
+                
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,57 +58,22 @@ namespace TORES
 
         private void cbxMeetRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected = cbxMeetRoom.SelectedIndex.ToString();
+           string SelectedValue = cbxMeetRoom.SelectedItem.ToString();
 
-            switch (selected)
-            {
-                case "Ephesus1":
-                   
-                    break;
-                case "Phokaia2":
-                    
-                    break;
-                case "Milet3":
-                    
-                    break;
-                case "Aspendos4":
-                   
-                    break;
-                case "Theos5":
-                    
-                    break;
-                case "Aizanoi6":
-                   
-                    break;
-                case "Anavarza7":
-                    
-                    break;
-                case "Zeugma8":
-                    chckbBoard.Enabled = true;
-                    chckbInternet.Enabled = true;
-                    break;
-                case "Knidos9":
-                    chckbBoard.Enabled = true;
-                    chckbInternet.Enabled = true;
-                    break;
-                case "Apollon10":
-                    chckbBoard.Enabled = true;
-                    chckbInternet.Enabled = true;
-                    break;
-                default:
-                    break;
-            }
+
+        
 
         }
         private void frmMeetRoom_Load(object sender, EventArgs e)
         {
-          cbxMeetRoom.SelectedIndex = 0;
-            nudRoomCapacity.Enabled = false;
-            chckbBoard.Enabled = false;
-            chckbInternet.Enabled = false;
-            chckbIPTV.Enabled = false;
-            chckbProjection.Enabled = false;
-            chckbVOIP.Enabled = false;
+            
+            RoomLoad();
+            DatagwLoad();
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            // Kullanıcının karar verdiği odanın SelectedValue değerini rezervasyon istek formuna parametre olarak gönderilecek
         }
     }
 }
